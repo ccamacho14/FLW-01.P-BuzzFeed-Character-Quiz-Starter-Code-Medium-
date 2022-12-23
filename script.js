@@ -9,7 +9,7 @@ function buzzfeedQuiz() {
   let q1 = document.querySelector(".q1");
   let q2 = document.querySelector(".q2");
   let q3 = document.querySelector(".q3");
-
+  let bug = document.querySelector(".bug")
   
   // task 5: declare variables for values we'll set later. You'll need one for an image source, a result and a score for each question.
   let imgSrc;
@@ -43,13 +43,13 @@ else{
     }
 
     // task 8: create a conditional statement for the responses to Question 2 based on the user input.
-if (q2value === "yellow"){
+if (q2value === "bad tempered"){
   q2Score = 1
 }
-else if (q2value ==="red"){
+else if (q2value ==="racy"){
   q2Score = 2
 }
-else if( q2value ==="pink"){
+else if( q2value ==="kind"){
   q2Score = 3
 }
 else{
@@ -59,13 +59,13 @@ else{
 
 
     // task 9: create a conditional statement for the responses to Question 3 based on the user input.
-if (q3value === "yellow"){
+if (q3value === "judging"){
 q3Score = 1
 }
-else if (q1value ==="red"){
+else if (q3value ==="adventurous"){
   q3Score = 2
 }
-else if (q1value ==="pink"){
+else if (q3value ==="interested"){
   q3Score = 3
 }
     else{
@@ -74,19 +74,28 @@ else if (q1value ==="pink"){
 
 
     // task 10: declare a variable for the total score of the quiz and set it equal to the sum of each question score.
-let totalScore = q1Score+q2Score+q3Score
+let totalScore = q1Score+ q2Score+ q3Score
 
 
 
     // task 11: create a conditional statement for the result to the quiz based on the total score. Using string interpolation, display these to the page: the result, an image that corresponds and a message to go with it.
-if (totalScore <= 4 && totalScore > 0) {
-  something
+
+    //use this as for bugging. bug.innerHTML = q3Score
+    
+    if (totalScore <= 4 && totalScore > 0) {
+  displayResult.innerHTML = "Lemon"
 }
-else if (totalScore === 5 or totalScore ==6){
-  something
+else if (totalScore === 5 || totalScore === 6){
+  displayResult.innerHTML = "Spicy pepper"
 }
 else if (totalScore >= 7){
-  something
+  displayResult.innerHTML = "Strawberry"
 }
+    else{
+      displayResult.innerHTML = "Dragon fruit" 
+  
+    }
+ 
+  }
+  
   };
-}
